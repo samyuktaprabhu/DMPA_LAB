@@ -50,7 +50,7 @@ def split_attribute(dataset):
 	# dataset[0] is attribute value
 	classes = list(set(row[-1] for row in dataset[1:]))
 
-	info_gain = gain_category(4, dataset[1:])
+	info_gain = gain_category(3, dataset[1:])
 	# print("info_gain: ",info_gain)
 
 	best_gain = 0
@@ -117,7 +117,7 @@ def split(node, max_depth, min_size, depth):
 
 def create_tree(data):
 	root = split_attribute(data)
-	split(root, 5, 1, 1)
+	split(root, 4, 1, 1)
 
 	return root
 

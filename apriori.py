@@ -10,7 +10,7 @@ counts = {}
 
 def read():
 	global counts
-	reader = csv.reader(open("input.csv", 'r'))
+	reader = csv.reader(open("apriori_input.csv", 'r'))
 	for row in reader:
 		transactions.append(row)
 		for ele in row:
